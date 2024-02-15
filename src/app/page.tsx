@@ -1,20 +1,9 @@
-import { Metadata } from "next";
-import CountriesOverview from "./components/CountriesOverview";
-import getData from "./libs/getData";
-import * as apiResponseTypes from "./libs/types/apiResponseTypes";
+import CountriesOverview from './components/CountriesOverview';
+import { Country } from './libs/types/apiResponseTypes';
+import countriesData from '../../data/countries.json';
 
-export const metadata: Metadata = {
-  title: `Countries Overview | REST Countries API`,
-  description: "An overview of all countries in the world.",
-  icons: {
-    icon: "/favicon.ico",
-  },
-};
-
-export default async function Overview() {
-  const data: apiResponseTypes.Country[] = await getData(
-    "https://restcountries.com/v3.1/all"
-  );
+export default function Overview() {
+  const data: Country[] = countriesData as Country[];
 
   return (
     <>

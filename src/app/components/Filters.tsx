@@ -1,6 +1,6 @@
-import React, { Dispatch, SetStateAction } from "react";
-import SearchFilter from "./SearchFilter";
-import RegionFilter from "./RegionFilter";
+import React, { Dispatch, SetStateAction } from 'react';
+import SearchFilter from './SearchFilter';
+import RegionFilter from './RegionFilter';
 
 type filtersProps = {
   setSearchFilter: Dispatch<SetStateAction<string>>;

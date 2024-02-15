@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 import useThemePreference, {
   possibleThemes,
-} from "../hooks/useThemePreference";
-import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
-import Link from "next/link";
+} from '../hooks/useThemePreference';
+import { MdDarkMode, MdOutlineDarkMode } from 'react-icons/md';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [theme, changeTheme] = useThemePreference();

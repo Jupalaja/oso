@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React from "react";
-import BackButton from "./components/BackButton";
-import { MdOutlineErrorOutline } from "react-icons/md";
+import React from 'react';
+import BackButton from './components/BackButton';
+import { MdOutlineErrorOutline } from 'react-icons/md';
 
 export default function error() {
   return (
