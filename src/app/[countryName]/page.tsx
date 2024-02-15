@@ -5,21 +5,18 @@ import countriesData from '../../../data/countries.json';
 
 function getCountryData(countryName: string): Country {
   const country = countriesData.find(
-    (c) => c.name.common.toLowerCase() === countryName.toLowerCase()
+    (c) =>
+      c.name.common.toLowerCase() ===
+      decodeURIComponent(countryName).toLowerCase()
   );
   if (!country) throw new Error(`Country '${countryName}' not found.`);
+
   const region = country.region as Region;
-  if (!region) throw new Error(`Region not found ${countryName}'.`);
+  if (!region) throw new Error(`Region not found for '${countryName}'.`);
 
   return {
     ...country,
     region,
-  } as Country;
-
-  type countryProps = {
-    params: {
-      countryName: string;
-    };
   };
 }
 
